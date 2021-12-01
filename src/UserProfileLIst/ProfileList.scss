@@ -1,0 +1,148 @@
+
+  .profile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow: hidden;
+  }
+  
+  .profile .profilebox {
+    margin-top: 10%;
+    background-color: grey;
+    color: black;
+    height: 350px;
+    width: 235px;
+    padding: 2%;
+    justify-self: center;
+    text-align: center;
+  }
+  
+  .profile .picture {
+    width: 75%;
+    height: 50%;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 7.5%;
+    margin-bottom: 0%;
+  }
+  
+  .profile .picture img {
+    width: 75%;
+    height: 75%;
+    border-radius: 40%;
+    border: solid 1px;
+  }
+  
+  .username {
+    font-size: 100%;
+    color: white;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .username:hover{
+    color: aqua;
+  }
+  
+  .mailid {
+    margin-top: 5%;
+    font-size: 50%;
+    opacity: 0;
+    color: white;
+    overflow: hidden;
+  }  
+  .profilebox:hover .mailid {
+  
+    opacity: 1;
+    font-size: 100%;
+    overflow: hidden;
+  }
+  
+  .profilebox:hover .picture {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40%;
+    cursor: pointer;
+  }
+  
+  .profilebox:hover img {
+    margin-left: 0;
+    margin-right: 0;
+    width: 215px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  @media (min-width:767px) and (max-width:1024px) {
+    .profile {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+    }
+
+    .profile .profilebox {
+        background-color: grey;
+        color: black;
+        height: 375px;
+        width: 235px;
+        padding: 2%;
+        justify-self: center;
+    }
+    .username {
+      font-size: 100%;
+  }
+    .mailid {
+        opacity: 1;
+        font-size: 50%;
+    }
+}
+/*for mobile*/
+@media (min-width:150px) and (max-width:766px) {
+    .profile {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        overflow: hidden;
+    }
+
+    .profile .profilebox {
+        height: 300px;
+        width: 300px;
+    }
+    .profilebox:hover img {
+      margin-left: 30%;
+      margin-right: 0%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .profilebox:hover .picture {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 0%;
+      cursor: pointer;
+    }
+    .mailid {
+        opacity: 1;
+        font-size: 75%;
+    }
+    .username {
+        font-size: 100%;
+        margin-bottom: 10%;
+    }
+
+    .profile .picture {
+        width: 75%;
+        height: 50%;
+        align-items: center;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 7.5%;
+        margin-bottom: 10%;
+    }
+
+}
